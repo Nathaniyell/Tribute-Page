@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #eeeeee;
+    padding-bottom: 20px;
+}
+
+nav {
+    width: 100%;
+    background-color: #333;
+    height: 70px;
+    position: fixed;
+    top: 0;
+}
+
+nav div i {
+    font-size: 1.8rem;
+}
+
+nav div {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    color: #f5f5f7;
+}
+
+.sidebar-toggle {
+    cursor: pointer;
+    font-size: 1.8rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.sidebar {
+    list-style: none;
+    padding: 20px;
+    flex-direction: column;
+    background-color: #333;
+    margin-top: 10px;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    transform: translate(-100%);
+    transition: all 0.5s linear;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: all .4s ease-in;
+}
+
+.show-sidebar {
+    transform: translate(0);
+}
+
+.sidebar .close-btn {
+    background-color: transparent;
+    border: none;
+    color: #f5f5f7;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+
+nav .sidebar li a:hover {
+    padding-left: 20px;
+}
+
+section {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #cfcfcf;
+    width: 350px;
+    margin: 90px auto 0;
+
+}
+
+section .header {
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    margin: 50px auto 0;
+}
+
+.header h1 {
+    font-size: 35px;
+    padding: 10px 0;
+}
+
+#tributes {
+    color: rgb(73, 70, 70);
+    width: 330px;
+    margin: 20px auto 0;
+    border-bottom: 1px solid #cfcfcf;
+    border-top: 1px solid #cfcfcf;
+}
+
+#message {
+    padding: 10px;
+    width: unset;
+    text-align: center;
+
+}
+
+footer {
+    width: 300px;
+    margin: 0px auto;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+
+
+.message {
+    margin-top: 30px;
+    font-size: 16px;
+    color: black;
+    padding: 10px 0;
+}
+
+
+.text {
+    font-size: 16px;
+    line-height: 2;
+}
+
+.author {
+    line-height: 2;
+    font-size: 14px;
+    color: rgb(126, 119, 119);
+}
+
+
+footer h1 {
+    font-size: 35px;
+    padding-top: 10px;
+    margin: 10px 0;
+}
+
+
+@media (min-width: 576px) {
+    section {
+        background-color: white;
+        width: 550px;
+        border-radius: 5px;
+        border: 1px solid #cfcfcf;
+
+    }
+
+    section .header {
+        padding: 20px;
+        text-align: center;
+        width: 80%;
+    }
+
+
+
+    #tributes {
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+    #message {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    footer {
+        width: 90%;
+        margin: 0px auto;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    footer h1 {
+        font-size: 35px;
+        padding-top: 10px;
+        margin: 10px 0;
+    }
+
+    i {
+        font-size: 19px;
+        padding: 0 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    section {
+        width: 750px;
+    }
+
+    section .header,
+    #tributes {
+        width: 90%;
+    }
+}
+
+@media (min-width: 922px) {
+    section {
+        width: 900px;
+        margin-top: 90px;
+    }
+
+    section .header,
+    #tributes,
+    footer {
+        width: 60%;
+    }
+
+    nav {
+        height: 70px;
+    }
+
+    nav div {
+        display: none;
+    }
+
+    nav .sidebar {
+        background-color: inherit;
+        flex-direction: row;
+        height: 40%;
+        justify-content: space-between;
+        align-items: center;
+        transform: translate(0);
+        margin-top: 0;
+    }
+
+    nav .sidebar li a {
+        font-size: 14px;
+    }
+
+    nav .sidebar li a:hover {
+        padding-left: unset;
+        background-color: #fff;
+        color: #333;
+    }
+
+    nav .sidebar .close-btn {
+        display: none;
+    }
+
+    #message {
+        text-align: justify;
+    }
+
+    .message {
+        font-size: 15px;
+    }
+
+    .text {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .author {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 1200px) {
+    nav .sidebar li a {
+        font-size: 18px;
+    }
+
+    .header h1 {
+        font-size: 45px;
+    }
+
+}
